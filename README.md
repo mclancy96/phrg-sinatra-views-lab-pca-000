@@ -1,40 +1,40 @@
-# Sinatra Views Lab
+# Rails Views Lab
 
 ## Objectives
 
-1. Respond to HTTP Requests with Sinatra Routes.
-2. Render ERB from a Sinatra Action.
+1. Respond to HTTP Requests with Rails Routes and Controller Actions.
+2. Render ERB from a Rails Controller Action.
 
 ## Overview
 
-This lesson practices creating ERB views and rendering them from a Sinatra
+This lesson practices creating ERB views and rendering them from a Rails Controller
 Action in response to an HTTP request. Fork and clone this repository and run
 `bundle install` to get started!
 
 ## Instructions
 
-For each of the following examples, create a `.erb` file in the `views`
-directory and a route in `app.rb` which renders that template. Make sure each
+For each of the following examples, create a `.html.erb` file in the `app/views/application`
+directory and ensure the corresponding controller action renders that template. Make sure each
 template contains the requested content.
 
-Run `shotgun` to start a local server so that you can test your app in your
-browser. Once your application is running, assuming port 9393, the shotgun
+Run `rails server` to start a local server so that you can test your app in your
+browser. Once your application is running, assuming port 3000, the Rails
 default, you should be able to hit the following local urls:
-http://localhost:9393/hello, http://localhost:9393/goodbye, and
-http://localhost:9393/date.
+http://localhost:3000/hello, http://localhost:3000/goodbye, and
+http://localhost:3000/date.
 
-You can run `learn` to get the tests passing and see errors.
+You can run `bundle exec rspec` to get the tests passing and see errors.
 
-1. Create a template called `hello.erb` in `views` that contains an `h1` tag
+1. Create a template called `hello.html.erb` in `app/views/application` that contains an `h1` tag
    with the content `Hello World`. This should get rendered via a GET `/hello`
-   route by your `App` controller in `app.rb`.
+   route by your `ApplicationController` in `app/controllers/application_controller.rb`.
 
-2. Create another template called `goodbye.erb` in `views`. In this view, use
+2. Create another template called `goodbye.html.erb` in `app/views/application`. In this view, use
    ERB tags to create a variable `name`. This variable should store the name
    `Joe`. Then, using ERB tags, say "Goodbye Joe" in an `h1` tag. This should get
-   rendered via a GET `/goodbye` route by your `App` controller in `app.rb`.
+   rendered via a GET `/goodbye` route by your `ApplicationController`.
 
-3. Create a template called `date.erb` in `views` that gets rendered via GET
+3. Create a template called `date.html.erb` in `app/views/application` that gets rendered via GET
    `/date`. It should contain an `h1` with the content `Today`
 
 Using ERB tags, and the [DateTime library](http://ruby-doc.org/stdlib-2.3.1/libdoc/date/rdoc/DateTime.html),
@@ -45,4 +45,4 @@ something like this `The date is Wednesday, November 18, 2015`.
 
 Please open a [GitHub issue](https://github.com/learn-co-curriculum/phrg-sinatra-views-lab/issues) or [pull-request](https://github.com/learn-co-curriculum/phrg-sinatra-views-lab/pulls). Provide a detailed description that explains the issue you have found or the change you are proposing. Then "@" mention your instructor on the issue or pull-request, and send them a link via Connect.
 
-<p data-visibility='hidden'>PHRG Sinatra Views Lab</p>
+<p data-visibility='hidden'>PHRG Rails Views Lab</p>
