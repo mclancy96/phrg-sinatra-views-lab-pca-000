@@ -1,7 +1,5 @@
-ENV['SINATRA_ENV'] ||= "development"
-ENV['RACK_ENV'] ||= "development"
+# Load the Rails application.
+require_relative "application"
 
-require 'bundler/setup'
-Bundler.require(:default, ENV['SINATRA_ENV'])
-
-require './app'
+# Initialize the Rails application.
+Rails.application.initialize!
